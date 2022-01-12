@@ -1,0 +1,56 @@
+@mixin btn($bgc, $borderColor, $color, $fontSize) {
+  background-color: $bgc;
+  border: 1px solid $borderColor;
+  color: $color;
+  font-size: $fontSize;
+}
+.btn {
+  background-color: #8b5cf6;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+input {
+  border: solid 1px #8b5cf6;
+  margin-top: 5px;
+  border-radius: 6px;
+  outline: none;
+  &:focus {
+    border: 2px solid #8b5cf6;
+  }
+}
+.delete {
+  @include btn(#fff, #fff, #000, 20px);
+  margin-left: 10px;
+}
+.edit {
+  @include btn(#fff, #fff, #8b5cf6, 20px);
+}
+.div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  padding-right: 6px;
+  input {
+    width: 73%;
+    margin: 8px 8px;
+    padding: 3px 28px;
+    margin-right: 20px;
+    opacity: 0.6;
+  }
+  .icon {
+    position: absolute;
+    font-size: 20px;
+    left: 24px;
+    top: 35px;
+  }
+  span {
+    font-size: 33px;
+    color: #8b5cf6;
+  }
+}

@@ -1,21 +1,54 @@
 import { Link } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
+import { FaUserEdit } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 const Contact = ({ deleteHandler, contactList }) => {
   return (
-    <section>
-      {contactList.map((c) => {
-        return (
-          <ul key={c.id}>
-            <Link to={`user/${c.id}`} state={{ name: c.name, email: c.email }}>
-              <li>{c.name}</li>
-              <li>{c.email}</li>
-            </Link>
-            <Link to={`/edit/${c.id}`}>
-              <button>Edit</button>
-            </Link>
-            <button onClick={() => deleteHandler(c.id)}>Delete</button>
-          </ul>
-        );
-      })}
+    <section class="mt-3">
+      {contactList ? (
+        contactList.map((c) => {
+          return (
+            <section key={c.id}>
+              <ul
+                key={c.id}
+                class="flex justify-between flex-row 
+                items-center px-5 py-2 mb-2 
+                  "
+              >
+                <Link
+                  to={`user/${c.id}`}
+                  state={{ name: c.name, email: c.email }}
+                >
+                  <li class="flex justify-center items-center">
+                    <span class="text-3xl text-violet-600">
+                      <FaUserCircle />
+                    </span>
+                    <div class="flex ml-4 ">
+                      <span class="font-serif"> {c.name}</span>
+                    </div>
+                  </li>
+                </Link>
+                <div class="flex">
+                  <Link to={`/edit/${c.id}`} className="edit">
+                    <FaUserEdit />
+                  </Link>
+                  <button
+                    onClick={() => deleteHandler(c.id)}
+                    className="delete"
+                  >
+                    <FaTrashAlt />
+                  </button>
+                </div>
+              </ul>
+              <span class="flex justify-center">
+                <hr class="w-11/12" />
+              </span>
+            </section>
+          );
+        })
+      ) : (
+        <p>Loading ...</p>
+      )}
     </section>
   );
 };

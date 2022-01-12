@@ -1,0 +1,76 @@
+.btn {
+  background-color: #8b5cf6;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5px;
+}
+
+input {
+  border: solid 1px #8b5cf6;
+  margin-top: 5px;
+  border-radius: 6px;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid #8b5cf6;
+}
+
+.delete {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #000;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.edit {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #8b5cf6;
+  font-size: 20px;
+}
+
+.div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+  padding-right: 6px;
+}
+
+.div input {
+  width: 73%;
+  margin: 8px 8px;
+  padding: 3px 28px;
+  margin-right: 20px;
+  opacity: 0.6;
+}
+
+.div .icon {
+  position: absolute;
+  font-size: 20px;
+  left: 24px;
+  top: 35px;
+}
+
+.div span {
+  font-size: 33px;
+  color: #8b5cf6;
+}
+/*# sourceMappingURL=App.css.map */
