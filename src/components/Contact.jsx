@@ -20,10 +20,10 @@ const Contact = ({ deleteHandler, contactList }) => {
                   state={{ name: c.name, email: c.email }}
                 >
                   <li class="flex justify-center items-center">
-                    <span class="text-3xl text-violet-600">
+                    <span class="text-3xl md:text-4xl xl:text-5xl text-violet-600">
                       <FaUserCircle />
                     </span>
-                    <div class="flex ml-4 ">
+                    <div class="flex ml-4 md:text-lg xl:text-2xl">
                       <span class="font-serif"> {c.name}</span>
                     </div>
                   </li>
@@ -41,7 +41,7 @@ const Contact = ({ deleteHandler, contactList }) => {
                 </div>
               </ul>
               <span class="flex justify-center">
-                <hr class="w-11/12" />
+                <hr class="w-11/12 md:w-full" />
               </span>
             </section>
           );
