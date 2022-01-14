@@ -39,7 +39,7 @@ const AddContact = () => {
             </span>
             <input
               type="text"
-              name="Name"
+              name="name"
               placeholder="Name"
               value={contact.name}
               onChange={changeHandler}
@@ -52,7 +52,7 @@ const AddContact = () => {
             </span>
             <input
               type="text"
-              name="Email"
+              name="email"
               placeholder="Email"
               value={contact.email}
               onChange={changeHandler}

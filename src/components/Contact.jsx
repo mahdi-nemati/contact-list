@@ -8,42 +8,44 @@ const Contact = ({ deleteHandler, contactList }) => {
       {contactList ? (
         contactList.map((c) => {
           return (
-            <section key={c.id}>
-              <ul
-                key={c.id}
-                class="flex justify-between flex-row 
+            <main class="xl:flex xl:justify-center">
+              <section key={c.id} class="xl:w-3/4">
+                <ul
+                  key={c.id}
+                  class="flex justify-between flex-row 
                 items-center px-5 py-2 mb-2 
                   "
-              >
-                <Link
-                  to={`user/${c.id}`}
-                  state={{ name: c.name, email: c.email }}
                 >
-                  <li class="flex justify-center items-center">
-                    <span class="text-3xl md:text-4xl xl:text-5xl text-violet-600">
-                      <FaUserCircle />
-                    </span>
-                    <div class="flex ml-4 md:text-lg xl:text-2xl">
-                      <span class="font-serif"> {c.name}</span>
-                    </div>
-                  </li>
-                </Link>
-                <div class="flex">
-                  <Link to={`/edit/${c.id}`} className="edit">
-                    <FaUserEdit />
-                  </Link>
-                  <button
-                    onClick={() => deleteHandler(c.id)}
-                    className="delete"
+                  <Link
+                    to={`user/${c.id}`}
+                    state={{ name: c.name, email: c.email }}
                   >
-                    <FaTrashAlt />
-                  </button>
-                </div>
-              </ul>
-              <span class="flex justify-center">
-                <hr class="w-11/12 md:w-full" />
-              </span>
-            </section>
+                    <li class="flex justify-center items-center">
+                      <span class="text-3xl md:text-4xl xl:text-5xl text-violet-600">
+                        <FaUserCircle />
+                      </span>
+                      <div class="flex ml-4 md:text-lg xl:text-2xl">
+                        <span class="font-serif"> {c.name}</span>
+                      </div>
+                    </li>
+                  </Link>
+                  <div class="flex">
+                    <Link to={`/edit/${c.id}`} className="edit">
+                      <FaUserEdit />
+                    </Link>
+                    <button
+                      onClick={() => deleteHandler(c.id)}
+                      className="delete"
+                    >
+                      <FaTrashAlt />
+                    </button>
+                  </div>
+                </ul>
+                <span class="flex justify-center">
+                  <hr class="w-11/12 md:w-full" />
+                </span>
+              </section>
+            </main>
           );
         })
       ) : (

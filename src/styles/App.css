@@ -157,4 +157,10 @@ input:focus {
     font-size: 20px;
   }
 }
+
+@media screen and (min-width: 1270px) {
+  .icon {
+    background-color: red;
+  }
+}
 /*# sourceMappingURL=App.css.map */

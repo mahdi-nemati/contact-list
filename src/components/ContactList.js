@@ -45,24 +45,28 @@ const ContactList = () => {
     }
   };
   return (
-    <section>
-      <div className="div">
-        <MdSearch className="icon" />
-        <input
-          type="text"
-          value={search}
-          placeholder="search"
-          onChange={changeHandler}
-        />
-        <Link to="/Add">
-          <span>
-            <FaUserPlus />
-          </span>
-        </Link>
-      </div>
+    <main>
+      <aside class="xl:flex xl:justify-center">
+        <section class="xl:w-3/4">
+          <div className="div">
+            <MdSearch className="icon" />
+            <input
+              type="text"
+              value={search}
+              placeholder="search"
+              onChange={changeHandler}
+            />
+            <Link to="/Add">
+              <span>
+                <FaUserPlus />
+              </span>
+            </Link>
+          </div>
+        </section>
+      </aside>
 
       <Contact contactList={contactList} deleteHandler={deleteHandler} />
-    </section>
+    </main>
   );
 };
 
