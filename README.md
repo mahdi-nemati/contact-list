@@ -9,7 +9,7 @@ update contact name  <br/>
 update contact email  <br/>
 see the contacts details in a specific page <hr/>
 ## technology used : <br/>
-1.React (React hooks,json-server package,axios libary,react-icon) <br/>
+1.React (React hooks,React-router-dom,json-server package,axios libary,react-icon) <br/>
 2.Tailwind css <br/>
 3.Sass (Scss) <br/>
  
